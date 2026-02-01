@@ -1,14 +1,15 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Question, AnswerPayload, ApiResponse } from '../models/types';
+import { environment } from '../../environments/environment';
 
 @Injectable({
     providedIn: 'root'
 })
 export class GoogleSheetsService {
     private http = inject(HttpClient);
-    private apiUrl = 'https://script.google.com/macros/s/AKfycbyk0rA40_m2DDJkuW1pG2IJ_0HHUVm8BTmp9sIe5i2UyXTDKG3wsEUQ7NeLVxc9Mqx6ow/exec';
+    private apiUrl = environment.gasApiUrl;
 
     getQuestions(): Observable<Question[]> {
         return this.http.get<Question[]>(this.apiUrl);
