@@ -17,7 +17,7 @@ import { Question, AnswerPayload } from '../../models/types';
       </header>
 
       <!-- Loading State -->
-      <div *ngIf="loading" class="nes-container is-rounded">
+      <div *ngIf="loading" class="nes-container is-rounded is-dark">
         <p>Loading API... <i class="nes-icon is-small heart"></i></p>
         <progress class="nes-progress is-primary" value="50" max="100"></progress>
       </div>
@@ -33,7 +33,7 @@ import { Question, AnswerPayload } from '../../models/types';
 
       <!-- Questions Form -->
       <div *ngIf="!loading && questions.length > 0">
-        <div *ngFor="let q of questions; let i = index" class="nes-container with-title" style="margin-bottom: 2rem;">
+        <div *ngFor="let q of questions; let i = index" class="nes-container with-title is-dark" style="margin-bottom: 2rem;">
           <p class="title">Quest {{ i + 1 }}</p>
           <div class="nes-field">
             <label>{{ q.title }}</label>

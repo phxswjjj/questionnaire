@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   imports: [CommonModule, FormsModule],
   template: `
     <div class="container" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
-      <div class="nes-container with-title is-centered">
+      <div class="nes-container with-title is-centered is-dark">
         <p class="title">Pixel Login</p>
         
         <div style="margin-bottom: 2rem;">
